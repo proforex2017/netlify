@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Notepad - Your Digital Writing Companion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- File Management Panel -->
+        <aside class="file-panel">
+            <button id="new-file-btn" class="btn primary">
+                <i class="icon">➕</i> New File
+            </button>
+            <div id="file-list" class="saved-files">
+                <!-- Dynamically populated file list -->
+            </div>
+        </aside>
+
+        <main class="notepad-container">
+            <!-- Title Section -->
+            <header class="notepad-header">
+                <h1>Online Notepad</h1>
+
+                <!-- Toolbar -->
+                <div class="toolbar">
+                    <button id="open-file" class="btn">📂 Open</button>
+                    <button id="save-file" class="btn">💾 Save</button>
+                    <div class="dropdown">
+                        <button id="export-file" class="btn">📜 Export</button>
+                        <div class="dropdown-content">
+                            <a href="#" data-type="txt">TXT</a>
+                            <a href="#" data-type="pdf">PDF</a>
+                            <a href="#" data-type="docx">DOCX</a>
+                        </div>
+                    </div>
+                    <button id="rename-file" class="btn">✏️ Rename</button>
+                    <button id="delete-file" class="btn delete">❌ Delete</button>
+                </div>
+            </header>
+
+            <!-- AdSense Top Banner -->
+            <div id="top-adsense" class="ad-banner">
+                <!-- Google AdSense Top Banner Placeholder -->
+            </div>
+
+            <!-- Main Editor -->
+            <div id="editor-container">
+                <div id="toolbar">
+                    <button id="toggle-tiny-toolbar" class="btn">✨ Toggle Mini</button>
+                    <div id="tiny-toolbar" class="tiny-toolbar hidden">
+                        <button class="mini-btn" data-format="bold">B</button>
+                        <button class="mini-btn" data-format="italic">I</button>
+                        <button class="mini-btn" data-format="underline">U</button>
+                        <button class="mini-btn" data-format="list" data-value="bullet">•</button>
+                        <button class="mini-btn" data-format="list" data-value="ordered">1.</button>
+                    </div>
+                    <span class="ql-formats">
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <select class="ql-align"></select>
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-undo">↩️</button>
+                        <button class="ql-redo">↪️</button>
+                    </span>
+                    <span id="word-count">Words: 0</span>
+                    <button id="fullscreen-toggle">🖥️</button>
+                </div>
+                <div id="editor"></div>
+            </div>
+
+            <!-- Bottom AdSense Banner -->
+            <div id="bottom-adsense" class="ad-banner">
+                <!-- Google AdSense Bottom Banner Placeholder -->
+            </div>
+
+            <!-- SEO Article -->
+            <section class="seo-content">
+                <h2>Online Notepad: Your Ultimate Digital Writing Companion</h2>
+                <article>
+                    <p>In today's fast-paced digital world, having a reliable online notepad is more crucial than ever. Our Online Notepad provides a seamless, intuitive writing experience that adapts to your productivity needs.</p>
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Advanced text formatting</li>
+                        <li>Easy file management</li>
+                        <li>Multiple export options</li>
+                        <li>Cloud-based storage</li>
+                    </ul>
+                    <p>Whether you're a student, professional, or creative writer, our Online Notepad empowers you to capture, organize, and transform your ideas effortlessly.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+</html>
